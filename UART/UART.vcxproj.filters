@@ -23,6 +23,15 @@
     <ClCompile Include="ErrorHandling.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="UARTInterface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsoleReadWriteUtilities.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UARTDemonstration.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="COMPortUtilities.h">
@@ -32,6 +41,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ErrorHandling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UARTInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsoleReadWriteUtilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UARTDemonstration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
