@@ -18,7 +18,7 @@
 #define MAX_ATTEMPTS_TO_WAIT_FOR_COM_PORT_TO_COMPLETE_OPERATIONS	10000
 
 
-bool IsHandleValid( HANDLE hCOMPort )
+bool IsHandleValid( const HANDLE hCOMPort )
 {
 	if ( hCOMPort == INVALID_HANDLE_VALUE || hCOMPort == NULL )
 		return false;
@@ -26,8 +26,10 @@ bool IsHandleValid( HANDLE hCOMPort )
 	return true;
 }
 
-DWORD WINAPI TryOpenCOMPort()
+uint64_t WINAPI TryOpenCOMPort( LPVOID pArguments )
 {
+	THREAD_RESULT* pThreadResult = (THREAD_RESULT*)pArguments;
+
     HANDLE hCOMPort = INVALID_HANDLE_VALUE;
     int nAttempts = 1;
 
@@ -44,7 +46,7 @@ DWORD WINAPI TryOpenCOMPort()
 		if ( IsHandleValid( hCOMPort ) )
 		{
 			printf_s( "Attempt %d to open \"%s\" succeeded.\n", nAttempts, COM_PORT_NAME );
-			return (DWORD)hCOMPort; // Return the handle;
+			break;
 		}
 			
 		HandleError( UNABLE_TO_OPEN_COM_PORT_VIA_CREATE_FILE );
@@ -52,7 +54,11 @@ DWORD WINAPI TryOpenCOMPort()
         ++nAttempts;
     }
 
-    return (DWORD)INVALID_HANDLE_VALUE;
+	pThreadResult->nnHandleResult = (uint64_t)hCOMPort;
+
+	// !!We retun the same result, but if it is INVALID_HANDLE_VALUE it will be cutted, 
+	// so the real result is in the thread data!!
+	return pThreadResult->nnHandleResult;
 }
 
 HANDLE OpenCOMPort()
@@ -67,7 +73,8 @@ HANDLE OpenCOMPort()
 	int nTryCount = 0;
 	while ( nTryCount < MAX_ATTEMPTS_FOR_MAIN_THREAD_TO_OPEN_COM_PORT )
 	{
-        hThread = CreateThread( NULL, 0, TryOpenCOMPort, NULL, CREATE_SUSPENDED, &threadId );
+		THREAD_RESULT oThreadResult;
+        hThread = CreateThread( NULL, 0, TryOpenCOMPort, &oThreadResult, CREATE_SUSPENDED, &threadId );
 
         if ( hThread == NULL ) 
 		{
@@ -94,14 +101,14 @@ HANDLE OpenCOMPort()
 		}
 
         // Get the handle value returned by the thread
-		DWORD dwResult = 0UL;
-        if ( !GetExitCodeThread( hThread, &dwResult ) )
+		uint64_t nnThreadResult = 0ULL;
+        if ( !GetExitCodeThread( hThread, &nnThreadResult ) )
 		{
 			HandleError( UNABLE_TO_GET_EXIT_CODE_FROM_THREAD );
 			continue;
 		}
 
-		hCOMPort = dwResult;
+		hCOMPort = (HANDLE)oThreadResult.nnHandleResult;
 
         if ( IsHandleValid ( hCOMPort ) ) 
 		{
@@ -121,7 +128,7 @@ HANDLE OpenCOMPort()
 		}
 
         ++nTryCount;
-        printf_s( "Main thread try %d failed to get a valid handle.\n", nTryCount );
+        printf_s( "Main thread try %d failed to get a valid handle.\n\n", nTryCount );
     }
 
 	if ( !IsHandleValid( hCOMPort ) )
@@ -242,7 +249,7 @@ static bool ConfigureSerialPortMontitoredEvents( hCOMPort )
 	return true;
 }
 
-bool ConfigureCOMPort( const COMPortModes eCOMPortMode, const bool bIsReconfiguration, HANDLE hCOMPort )
+bool ConfigureCOMPort( const COMPortModes eCOMPortMode, const bool bIsReconfiguration, const HANDLE hCOMPort )
 {
 	if ( !bIsReconfiguration )
 		printf_s( "Configuring COM port.\n" );
@@ -305,7 +312,7 @@ bool WaitToCompleteCOMPortsOperations( HANDLE hCOMPort )
 	return true;
 }
 
-bool CloseCOMPort( HANDLE hCOMPort )
+bool CloseCOMPort( const HANDLE hCOMPort )
 {
 	printf_s("Closing COM Port...\n");
 

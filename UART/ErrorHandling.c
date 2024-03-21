@@ -44,7 +44,7 @@ void HandleError( const DetailedErrorTypes eDetailedErrorType )
 
 		case UNABLE_TO_OPEN_COM_PORT_VIA_CREATE_FILE:
 		{
-			wprintf_s( L"Error while opening COM port! Context: CreateFile, Error message: %s\n", wszMessage );
+			wprintf_s( L"Error while opening COM port! Context: CreateFile, Error message: %s", wszMessage );
 			break;
 		}
 
@@ -140,7 +140,7 @@ void HandleError( const DetailedErrorTypes eDetailedErrorType )
 
 		case TOO_LONG_INPUT_OUTPUT_OPERATIONS:
 		{
-			printf_s( "Too long to complete the input and output operations before close the COM port. Error context: WaitToCompleteCOMPortsOperations" );
+			printf_s( "Too long to complete the input and output operations before close the COM port. Error context: WaitToCompleteCOMPortsOperations\n" );
 			break;
 		}
 

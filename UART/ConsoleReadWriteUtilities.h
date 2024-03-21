@@ -11,4 +11,4 @@ void PrintSerialPortInformation( const DWORD dwBaudRate, const BYTE bParity, con
 /// <param name="szInputArray"> [OUT] Array read from the console </param>
 /// <param name="nMaxSize"> [IN] Max size of the input array </param>
 /// <returns> true on success, false on error </returns>
-bool ReaInputMessage( char szInputArray[], const int nMaxSize );
+bool ReadInputMessage( char szInputArray[], const int nMaxSize );
