@@ -18,3 +18,5 @@ Additional optional instructions before running the application:
 1. Choose max size of the message sended/received via UART interface ( MAX_UART_MESSAGE_SIZE ).
 2. Choose how much tries to start a thread for opening the COM port ( MAX_ATTEMPTS_FOR_MAIN_THREAD_TO_OPEN_COM_PORT ).
 3. Choose how much times every thread will try to open the COM port ( MAX_ATTEMPTS_FOR_ADDITIONAL_THREAD_TO_OPEN_COM_PORT ).
+
+The application is tested via UART TTL CP2102 ( 6 Pin ) module, attached to the USB port.
