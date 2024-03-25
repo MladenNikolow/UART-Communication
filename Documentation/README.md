@@ -1,0 +1,1 @@
+To se the full documentation and visual graphs for the project, open the index.html file, which you can find in the directory.
