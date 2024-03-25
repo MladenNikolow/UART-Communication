@@ -234,7 +234,7 @@ static bool ConfigureSerialPortTimeouts( HANDLE hCOMPort )
 /// <summary> Configure the monitored events for the COM port </summary>
 /// <param name="hCOMPort"> [IN] Handle to COM port </param>
 /// <returns> true on success, false on error </returns>
-static bool ConfigureSerialPortMontitoredEvents( hCOMPort )
+static bool ConfigureSerialPortMonitoredEvents( hCOMPort )
 {
 	DWORD dwEvtMask = EV_RXCHAR
 					  | EV_TXEMPTY
@@ -262,7 +262,7 @@ bool ConfigureCOMPort( const COMPortModes eCOMPortMode, const bool bIsReconfigur
 	if ( !ConfigureSerialPortTimeouts( hCOMPort ) )
 		return false;
 
-	if ( !ConfigureSerialPortMontitoredEvents( hCOMPort ) )
+	if ( !ConfigureSerialPortMonitoredEvents( hCOMPort ) )
 		return false;
 
 	if ( !bIsReconfiguration )

@@ -7,7 +7,7 @@ var _c_o_m_port_utilities_8c =
     [ "MAX_ATTEMPTS_TO_WAIT_FOR_COM_PORT_TO_COMPLETE_OPERATIONS", "_c_o_m_port_utilities_8c.html#aa297fd02523c047fb09cf9196307a372", null ],
     [ "CloseCOMPort", "_c_o_m_port_utilities_8c.html#af7b21737016f2790466347246695a2c5", null ],
     [ "ConfigureCOMPort", "_c_o_m_port_utilities_8c.html#a1a6ed7d8efbc02609efe57f021ae5358", null ],
-    [ "ConfigureSerialPortMontitoredEvents", "_c_o_m_port_utilities_8c.html#af7231ab25b954ed5a871967bd1ed67c7", null ],
+    [ "ConfigureSerialPortMonitoredEvents", "_c_o_m_port_utilities_8c.html#ad419692d2f83062bc950c060b920ebc7", null ],
     [ "ConfigureSerialPortParameters", "_c_o_m_port_utilities_8c.html#a61b6f9671ddc71211b61f3b1df727aca", null ],
     [ "ConfigureSerialPortTimeouts", "_c_o_m_port_utilities_8c.html#a70f7cfcbbdccbccea6e8d4f61a1d59d0", null ],
     [ "IsHandleValid", "_c_o_m_port_utilities_8c.html#a10de388a3dbf6852f3f2db89b730b706", null ],
