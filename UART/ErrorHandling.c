@@ -3,7 +3,7 @@
 #include <stdbool.h>
 #include "ErrorHandling.h"
 
-LPVOID FormMessageFromErroCode( wchar_t** wszMessage, DWORD dwErrorCode )
+LPVOID FormMessageFromErrorCode( wchar_t** wszMessage, DWORD dwErrorCode )
 {
 	if ( wszMessage == NULL )
 		return;
@@ -33,7 +33,7 @@ void HandleError( const DetailedErrorTypes eDetailedErrorType )
 	LPVOID lpMessageBuffer = NULL;
 	wchar_t* wszMessage = NULL;
 	if ( bHasErrorCode )
-		lpMessageBuffer = FormMessageFromErroCode( &wszMessage, dwErrorCode );
+		lpMessageBuffer = FormMessageFromErrorCode( &wszMessage, dwErrorCode );
 	else
 		wszMessage = L"";
 		
