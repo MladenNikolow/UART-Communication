@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['unable_5fto_5fclose_5fcom_5fport_0',['UNABLE_TO_CLOSE_COM_PORT',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9a819202028f5eaf93a216b67c2e71755c',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fclose_5fcom_5fport_5fvia_5fclose_5fhandle_1',['UNABLE_TO_CLOSE_COM_PORT_VIA_CLOSE_HANDLE',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a7f46b03a78151e40293b1ae0b50926ab',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fclose_5fthread_5fhandle_2',['UNABLE_TO_CLOSE_THREAD_HANDLE',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34ae4563c3ed2bcbddc774bc967277a947f',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fconfigure_5fcom_5fport_3',['UNABLE_TO_CONFIGURE_COM_PORT',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9a14e3bc3c8c545b9ea06729e42ca0e768',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fcreate_5fthread_4',['UNABLE_TO_CREATE_THREAD',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34aea513a933968cc5f7c572ac01943c6eb',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fget_5fcurrent_5fstate_5fof_5fcom_5fport_5',['UNABLE_TO_GET_CURRENT_STATE_OF_COM_PORT',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34ac2646eb6201457e5295af6919414ce21',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fget_5fexit_5fcode_5ffrom_5fthread_6',['UNABLE_TO_GET_EXIT_CODE_FROM_THREAD',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a15e9b4ad3b0278910302a49f97dd3ada',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fopen_5fcom_5fport_7',['UNABLE_TO_OPEN_COM_PORT',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9afd807cbd8488f666b622d90f49d13459',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fopen_5fcom_5fport_5fvia_5fcreate_5ffile_8',['UNABLE_TO_OPEN_COM_PORT_VIA_CREATE_FILE',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a1400adf812e77072ed7dfc629f6c6e6a',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fread_5finput_9',['UNABLE_TO_READ_INPUT',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9a0444278a05c3942928663878e919f3f1',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fread_5finput_5fvia_5ffgets_10',['UNABLE_TO_READ_INPUT_VIA_FGETS',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34af9610fee7f92a8f53c4d1843b2992a1d',1,'ErrorTypes.h']]],
+  ['unable_5fto_5freceive_5fdata_11',['UNABLE_TO_RECEIVE_DATA',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9a0fe84f884feb43354647b569773d8ca4',1,'ErrorTypes.h']]],
+  ['unable_5fto_5freceive_5fdata_5fvia_5fuart_12',['UNABLE_TO_RECEIVE_DATA_VIA_UART',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34ac9d6cba2ef546da1249ae29f518edf59',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fresume_5fthread_13',['UNABLE_TO_RESUME_THREAD',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a953b605f9330b75c9d8b944ad725f9e5',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fsend_5fdata_14',['UNABLE_TO_SEND_DATA',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9ac377597b4b2c746e0a7a81202188a6c6',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fsend_5fdata_5fvia_5fuart_15',['UNABLE_TO_SEND_DATA_VIA_UART',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a8804d08996257e8c9f409f2b72ce89ff',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fset_5fmonitored_5fevents_16',['UNABLE_TO_SET_MONITORED_EVENTS',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a6086f5ce56e3e6610d05c61bcab266ca',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fset_5fstate_5fof_5fcom_5fport_17',['UNABLE_TO_SET_STATE_OF_COM_PORT',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34a56fa40a50a36d8c413c74469fcb69526',1,'ErrorTypes.h']]],
+  ['unable_5fto_5fset_5ftimeout_5fof_5fcom_5fport_18',['UNABLE_TO_SET_TIMEOUT_OF_COM_PORT',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34abee4e7e1dc184708b923d49ba2683791',1,'ErrorTypes.h']]]
+];

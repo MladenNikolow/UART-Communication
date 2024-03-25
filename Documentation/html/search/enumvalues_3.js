@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['no_5fdetailed_5ferror_0',['NO_DETAILED_ERROR',['../_error_types_8h.html#a25010968368efc198e4d4599aafdcf34aacb0d75140c725ee5d776a8626aa5061',1,'ErrorTypes.h']]],
+  ['no_5fgeneral_5ferror_1',['NO_GENERAL_ERROR',['../_error_types_8h.html#a0874db147128f6c47050bef01523a9e9a1f480ca580d935adaac0d9fa01276610',1,'ErrorTypes.h']]]
+];
